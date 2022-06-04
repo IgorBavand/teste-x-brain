@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.3</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.7.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.teste</groupId>
-	<artifactId>pedidos</artifactId>
-	<version>0.0.1</version>
-	<name>pedidos</name>
-	<description>Serviço de pedidos</description>
-
+	<groupId>com.teste.disparador_emails</groupId>
+	<artifactId>disparador_emails</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>disparador_emails</name>
+	<description>serviço de disparador de emails</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
 		<spring-cloud.version>2020.0.1</spring-cloud.version>
 	</properties>
-
 	<dependencies>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -87,6 +83,19 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
+		<!--	EMAIL	-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<!--    TEMPLATE ENGINE    -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
